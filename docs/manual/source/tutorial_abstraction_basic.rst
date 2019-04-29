@@ -34,7 +34,7 @@ in place of the standard LDAP filter syntax.
 There are two kinds of Cursor, **Reader** and **Writer**. This mitigates the risk of accidentally changing
 data in applications that access LDAP only for reading, isolating the writing component: a Reader cursor can't write
 to the DIT and a Writer cursor can't read data from it, Writer cursors are only used for modifying the DIT. So reading
-and writing of data are strictly kept isolated.
+and writing of data are kept strictly isolated.
 
 Cursors contain Entries. An **Entry** is the Python representation of an entry stored in the LDAP DIT. There are two types of Entries,
 **Read** and **Writable**. Each Entry has a status that identifies it's current state.
